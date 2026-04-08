@@ -297,5 +297,39 @@ if (online) {
 // roda ao carregar
 verificarHorarioLocal();
 
+// ==========================
+// AUTO PLAY INTELIGENTE
+// ==========================
+
+function iniciarAutoPlay() {
+if (!radioAudio) return;
+
+```
+setupAudio();
+
+radioAudio.volume = 0.2; // 🔥 20%
+
+radioAudio.play()
+    .then(() => {
+        updateUI(true);
+    })
+    .catch(err => {
+        console.log('Autoplay bloqueado:', err);
+    });
+
+// remove eventos depois que rodar uma vez
+document.removeEventListener('click', iniciarAutoPlay);
+document.removeEventListener('scroll', iniciarAutoPlay);
+document.removeEventListener('keydown', iniciarAutoPlay);
+```
+
+}
+
+// 👇 espera qualquer interação
+document.addEventListener('click', iniciarAutoPlay);
+document.addEventListener('scroll', iniciarAutoPlay);
+document.addEventListener('keydown', iniciarAutoPlay);
+
+
 // atualiza a cada 1 minuto
 setInterval(verificarHorarioLocal, 60000);
