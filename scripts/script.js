@@ -256,3 +256,46 @@ updateUI(false);
 if (volumeControl) {
     volumeControl.value = 100;
 }
+
+function verificarHorarioLocal() {
+const agora = new Date();
+
+```
+const horaAtual = agora.getHours();
+const minutoAtual = agora.getMinutes();
+
+const horarioAtual = horaAtual * 60 + minutoAtual;
+
+// 🔥 DEFINE AQUI
+const inicio = 8 * 60;   // 08:00
+const fim = 18 * 60;     // 18:00
+
+const estaOnline = horarioAtual >= inicio && horarioAtual <= fim;
+
+atualizarStatusRadio(estaOnline);
+```
+
+}
+
+function atualizarStatusRadio(online) {
+if (!statusDot || !statusText) return;
+
+```
+if (online) {
+    statusDot.style.background = '#00ff66';
+    statusDot.classList.add('pulse-anim');
+    statusText.textContent = 'Ao vivo agora';
+} else {
+    statusDot.style.background = '#555';
+    statusDot.classList.remove('pulse-anim');
+    statusText.textContent = 'Offline';
+}
+```
+
+}
+
+// roda ao carregar
+verificarHorarioLocal();
+
+// atualiza a cada 1 minuto
+setInterval(verificarHorarioLocal, 60000);
