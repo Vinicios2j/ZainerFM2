@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zainer FM | Oficial</title>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="styles/style.css">
+=======
+    <link rel="stylesheet" href="/styles/style.css">
+>>>>>>> dfd4b9422b6fafaca521ac09e00ff4eaad413614
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">ZAINER<span>FM</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#programacao">Programação</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contato" class="btn-contato">Anuncie Aqui</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="badget">Ao Vivo Agora 🔴</div>
+            <h1 class="reveal">A Rádio que <span>Conecta</span> o Mato Grosso</h1>
+            <p class="reveal">Música boa, prêmios e a melhor companhia para o seu dia. Vamos nessa!</p>
+            <div class="cta-group reveal">
+    <button class="btn-primary" id="main-play-btn" type="button">Ouvir Agora</button>
+    <button class="btn-secondary" type="button" onclick="document.getElementById('programacao').scrollIntoView({ behavior: 'smooth' })">
+        Ver Programação
+    </button>
+</div>
+
+<div class="radio-player reveal">
+    <div class="radio-status">
+        <span id="status-dot" class="status-dot"></span>
+        <span id="status-text">Offline</span>
+    </div>
+
+    <div class="radio-controls">
+        <button id="floating-play-btn" class="play-btn" type="button">▶</button>
+
+        <div class="volume-box">
+            <label for="volume-control">Volume</label>
+            <input id="volume-control" type="range" min="0" max="100" value="100">
+        </div>
+
+        <button id="mute-btn" class="mute-btn" type="button">🔊</button>
+    </div>
+</div>
+
+<audio id="radio-audio" preload="none"></audio>
+        </div>
+    </section>
+
+    <section class="ad-section container reveal" style="margin-top: 30px;">
+        <div class="ad-placeholder">
+            <span>PUBLICIDADE</span>
+        </div>
+    </section>
+
+    <section class="programacao" id="programacao">
+        <div class="container">
+            <h2 class="section-title">Nossa <span>Programação</span></h2>
+            <div class="grid-cards">
+                <div class="card reveal">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=500');">
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">08:00 - 11:00</span>
+                        <h3>Show da Manhã</h3>
+                        <p>Izaque Zainer trazendo a melhor energia para começar o dia.</p>
+                    </div>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=500');">
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">11:00 - 14:00</span>
+                        <h3>Zainer Mix</h3>
+                        <p>As músicas mais pedidas do seu almoço.</p>
+                    </div>
+                </div>
+
+                <div class="card reveal ad-card">
+                    <div class="ad-box-mini">
+                        <small>Patrocínio</small>
+                        <div class="ad-content">Seu Anúncio Aqui!</div>
+                    </div>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1571330735066-03aaa9429d89?auto=format&fit=crop&q=80&w=500');">
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">14:00 - 16:00</span>
+                        <h3>Deixa Rolar</h3>
+                        <p>O som não para! Os hits do momento estão aqui.</p>
+                    </div>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&q=80&w=500');">
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">18:00 - 20:00</span>
+                        <h3>Gospel FM</h3>
+                        <p>Momentos de fé e as melhores músicas cristãs.</p>
+                    </div>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=500');">
+                    </div>
+                    <div class="card-body">
+                        <span class="tag">22:00 - 00:00</span>
+                        <h3>Zainer Night</h3>
+                        <p>O clima perfeito para terminar sua noite.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container reveal">
+        <div class="ad-horizontal-pro">
+            <small>Publicidade / Google AdSense</small>
+            <div class="ad-placeholder-pro">BANNER 728x90</div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="logo">ZAINER<span>FM</span></div>
+                <p>Conectando o Mato Grosso através da música. Acompanhe nossa programação ao vivo e fique por dentro
+                    das principais notícias da região.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-btn">Instagram</a>
+                    <a href="#" class="social-btn">WhatsApp</a>
+                    <a href="#" class="social-btn">YouTube</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#programacao">Programação Completa</a></li>
+                    <li><a href="#blog">Notícias / Blog</a></li>
+                    <li><a href="#">Pedidos de Música</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="https://wa.me/seunumeroaqui">Anuncie Conosco</a></li>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="termos.html">Termos de Uso</a></li>
+                    <li><a href="contato.html">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 <strong>Zainer FM</strong> - CNPJ: 00.000.000/0001-00</p>
+                <p>Desenvolvido com ⚡ por <a href="#" style="color: var(--primary);">José Vinicios</a></p>
+            </div>
+        </div>
+    </footer>
+
+<<<<<<< HEAD
+    <script src="scripts/script.js"></script>
+=======
+    <script src="/scripts/script.js"></script>
+>>>>>>> dfd4b9422b6fafaca521ac09e00ff4eaad413614
+
+
+</body>
+
+</html>
