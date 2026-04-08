@@ -58,7 +58,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
         /* Camada 1: Um gradiente preto sólido com 80% de opacidade (ajuste aqui) */
         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         /* Camada 2: A imagem de fundo */
-        url('../assets/background-radio.jpg'); /* RENOMEIE SUA IMAGEM PARA ESTE NOME NO PROJETO */
+        url('../background-radio.jpg'); /* RENOMEIE SUA IMAGEM PARA ESTE NOME NO PROJETO */
     
     background-size: cover; /* Faz a imagem cobrir toda a seção */
     background-position: center; /* Centraliza a imagem */
