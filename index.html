@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXX');
+    </script>
 </head>
 
 <body>
@@ -18,8 +28,13 @@
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#programacao">Programação</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contato" class="btn-contato">Anuncie Aqui</a></li>
+                <li><a href="javascript:void(0)" class="nav-disabled" aria-disabled="true">Blog</a></li>
+                <li>
+                    <a href="https://wa.me/556692350863?text=Olá,%20vim%20pelo%20site%20da%20Zainer%20FM%20e%20quero%20anunciar!"
+                        target="_blank" class="btn-contato">
+                        Anuncie Aqui
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -30,31 +45,32 @@
             <h1 class="reveal">A Rádio que <span>Conecta</span> o Mato Grosso</h1>
             <p class="reveal">Música boa, prêmios e a melhor companhia para o seu dia. Vamos nessa!</p>
             <div class="cta-group reveal">
-    <button class="btn-primary" id="main-play-btn" type="button">Ouvir Agora</button>
-    <button class="btn-secondary" type="button" onclick="document.getElementById('programacao').scrollIntoView({ behavior: 'smooth' })">
-        Ver Programação
-    </button>
-</div>
+                <button class="btn-primary" id="main-play-btn" type="button">Ouvir Agora</button>
+                <button class="btn-secondary" type="button"
+                    onclick="document.getElementById('programacao').scrollIntoView({ behavior: 'smooth' })">
+                    Ver Programação
+                </button>
+            </div>
 
-<div class="radio-player reveal">
-    <div class="radio-status">
-        <span id="status-dot" class="status-dot"></span>
-        <span id="status-text">Offline</span>
-    </div>
+            <div class="radio-player reveal">
+                <div class="radio-status">
+                    <span id="status-dot" class="status-dot"></span>
+                    <span id="status-text">Offline</span>
+                </div>
 
-    <div class="radio-controls">
-        <button id="floating-play-btn" class="play-btn" type="button">▶</button>
+                <div class="radio-controls">
+                    <button id="floating-play-btn" class="play-btn" type="button">▶</button>
 
-        <div class="volume-box">
-            <label for="volume-control">Volume</label>
-            <input id="volume-control" type="range" min="0" max="100" value="100">
-        </div>
+                    <div class="volume-box">
+                        <label for="volume-control">Volume</label>
+                        <input id="volume-control" type="range" min="0" max="100" value="100">
+                    </div>
 
-        <button id="mute-btn" class="mute-btn" type="button">🔊</button>
-    </div>
-</div>
+                    <button id="mute-btn" class="mute-btn" type="button">🔊</button>
+                </div>
+            </div>
 
-<audio id="radio-audio" preload="none"></audio>
+            <audio id="radio-audio" preload="none"></audio>
         </div>
     </section>
 
@@ -67,74 +83,12 @@
     <section class="programacao" id="programacao">
         <div class="container">
             <h2 class="section-title">Nossa <span>Programação</span></h2>
-            <div class="grid-cards">
-                <div class="card reveal">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=500');">
-                    </div>
-                    <div class="card-body">
-                        <span class="tag">08:00 - 11:00</span>
-                        <h3>Show da Manhã</h3>
-                        <p>Izaque Zainer trazendo a melhor energia para começar o dia.</p>
-                    </div>
-                </div>
-
-                <div class="card reveal">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=500');">
-                    </div>
-                    <div class="card-body">
-                        <span class="tag">11:00 - 14:00</span>
-                        <h3>Zainer Mix</h3>
-                        <p>As músicas mais pedidas do seu almoço.</p>
-                    </div>
-                </div>
-
-                <div class="card reveal ad-card">
-                    <div class="ad-box-mini">
-                        <small>Patrocínio</small>
-                        <div class="ad-content">Seu Anúncio Aqui!</div>
-                    </div>
-                </div>
-
-                <div class="card reveal">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1571330735066-03aaa9429d89?auto=format&fit=crop&q=80&w=500');">
-                    </div>
-                    <div class="card-body">
-                        <span class="tag">14:00 - 16:00</span>
-                        <h3>Deixa Rolar</h3>
-                        <p>O som não para! Os hits do momento estão aqui.</p>
-                    </div>
-                </div>
-
-                <div class="card reveal">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&q=80&w=500');">
-                    </div>
-                    <div class="card-body">
-                        <span class="tag">18:00 - 20:00</span>
-                        <h3>Gospel FM</h3>
-                        <p>Momentos de fé e as melhores músicas cristãs.</p>
-                    </div>
-                </div>
-
-                <div class="card reveal">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=500');">
-                    </div>
-                    <div class="card-body">
-                        <span class="tag">22:00 - 00:00</span>
-                        <h3>Zainer Night</h3>
-                        <p>O clima perfeito para terminar sua noite.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="grid-cards" id="programacao-lista"></div>
         </div>
     </section>
 
     <div class="container reveal">
-        <div class="ad-horizontal-pro">
+        <div class="ad-horizontal-pro" id="banner-anuncio">
             <small>Publicidade / Google AdSense</small>
             <div class="ad-placeholder-pro">BANNER 728x90</div>
         </div>
@@ -147,9 +101,12 @@
                 <p>Conectando o Mato Grosso através da música. Acompanhe nossa programação ao vivo e fique por dentro
                     das principais notícias da região.</p>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/zainer_fm_oficial/" target="_blank" class="social-btn">Instagram</a>
-                    <a href="#" class="social-btn">WhatsApp</a>
-                    <a href="#" class="social-btn">YouTube</a>
+                    <a href="https://www.instagram.com/zainer_fm_oficial/" target="_blank" rel="noopener noreferrer"
+                        class="social-btn">Instagram</a>
+                    <a href="https://wa.me/556692350863" target="_blank" rel="noopener noreferrer"
+                        class="social-btn">WhatsApp</a>
+                    <a href="https://instagram.com/radiozainerfm" target="_blank" rel="noopener noreferrer"
+                        class="social-btn">YouTube</a>
                 </div>
             </div>
 
@@ -158,29 +115,82 @@
                 <ul>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#programacao">Programação Completa</a></li>
-                    <li><a href="#blog">Notícias / Blog</a></li>
-                    <li><a href="#">Pedidos de Música</a></li>
+                    <li><a href="javascript:void(0)" class="nav-disabled" aria-disabled="true">Notícias / Blog</a></li>
+                    <li><a href="pages/pedidos-musica.html" target="_blank" rel="noopener noreferrer">Pedidos de
+                            Música</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="footer-links">
                 <h4>Institucional</h4>
                 <ul>
-                    <li><a href="https://wa.me/seunumeroaqui">Anuncie Conosco</a></li>
-                    <li><a href="privacidade.html">Política de Privacidade</a></li>
-                    <li><a href="termos.html">Termos de Uso</a></li>
-                    <li><a href="contato.html">Trabalhe Conosco</a></li>
+                    <li>
+                        <a href="pages/anuncie.html" target="_blank" rel="noopener noreferrer">
+                            Anuncie Conosco
+                        </a>
+                    </li>
+                    <li><a href="pages/privacidade.html" target="_blank" rel="noopener noreferrer">Política de
+                            Privacidade</a>
+                    </li>
+                    <li><a href="pages/termos.html" target="_blank" rel="noopener noreferrer">Termos de Uso</a></li>
+                    <li><a href="pages/contato.html" target="_blank" rel="noopener noreferrer">Trabalhe Conosco</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
             <div class="container footer-bottom-flex">
-                <p>&copy; 2026 <strong>Zainer FM</strong> - CNPJ: 00.000.000/0001-00</p>
+                <p>&copy; 2026 <strong>Zainer FM</strong> - CNPJ: 62.580.380/0001-38</p>
                 <p>Desenvolvido com ⚡ por <a href="#" style="color: var(--primary);">José Vinicios</a></p>
             </div>
         </div>
     </footer>
+
+    <div id="cookieBox" style="
+position:fixed;
+bottom:20px;
+left:20px;
+right:20px;
+background:#14141c;
+border-radius:16px;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
+z-index:9999;
+">
+
+        <p style="color:#b8b8c2;">
+            Utilizamos cookies para melhorar sua experiência.
+        </p>
+
+        <div>
+            <button onclick="acceptCookies()"
+                style="margin-right:10px;background:#ff2d55;color:#fff;border:none;padding:10px 15px;border-radius:8px;">Aceitar</button>
+
+            <button onclick="rejectCookies()"
+                style="background:#333;color:#fff;border:none;padding:10px 15px;border-radius:8px;">Recusar</button>
+        </div>
+
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem("cookieConsent", "accepted");
+            document.getElementById("cookieBox").style.display = "none";
+        }
+
+        function rejectCookies() {
+            localStorage.setItem("cookieConsent", "rejected");
+            document.getElementById("cookieBox").style.display = "none";
+        }
+
+        if (localStorage.getItem("cookieConsent")) {
+            document.getElementById("cookieBox").style.display = "none";
+        }
+    </script>
 
     <script src="scripts/script.js"></script>
 

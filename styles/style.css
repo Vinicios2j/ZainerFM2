@@ -446,3 +446,192 @@ nav { display: flex; justify-content: space-between; align-items: center; }
     width: 180px;
     cursor: pointer;
 }
+
+/* ===================================== */
+/* HEADER RESPONSIVO AJUSTADO */
+/* ===================================== */
+
+header {
+    left: 0;
+    width: 100%;
+}
+
+header .container {
+    width: 100%;
+}
+
+nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Blog desabilitado */
+.nav-disabled {
+    opacity: 0.45;
+    pointer-events: none;
+    cursor: default;
+}
+
+.nav-disabled:hover {
+    color: #ccc !important;
+    padding-left: 0 !important;
+    transform: none !important;
+}
+
+/* Desktop normal */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    flex-wrap: nowrap;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    white-space: nowrap;
+}
+
+/* ===================================== */
+/* TABLET / MOBILE */
+/* ===================================== */
+@media (max-width: 768px) {
+    header {
+        padding: 14px 0;
+    }
+
+    nav.container {
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        flex: 1;
+        justify-content: flex-start;
+        min-width: 0;
+        padding-bottom: 2px;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links li {
+        flex: 0 0 auto;
+    }
+
+    .nav-links a {
+        font-size: 0.82rem;
+        white-space: nowrap;
+    }
+
+    .btn-contato {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        border-radius: 8px;
+        flex: 0 0 auto;
+    }
+}
+
+/* ===================================== */
+/* CELULAR PEQUENO */
+/* ===================================== */
+@media (max-width: 520px) {
+    nav.container {
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 1rem;
+        max-width: 120px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.76rem;
+    }
+
+    .btn-contato {
+        padding: 7px 10px;
+        font-size: 0.74rem;
+    }
+}
+
+/* ===================================== */
+/* AJUSTE HERO PARA NÃO FICAR ATRÁS DO HEADER */
+/* ===================================== */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding-top: 110px;
+        padding-bottom: 60px;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+        line-height: 1.05;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .radio-player {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-disabled {
+        display: none;
+    }
+}

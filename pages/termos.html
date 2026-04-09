@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termos de Uso | Zainer FM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="../icon.jpg" type="image/x-icon">
+<style>
+    :root {
+        --primary: #FFD700;
+        --bg: #0a0a0a;
+        --glass: rgba(255, 255, 255, 0.05);
+        --text: #fff;
+        --text-muted: #ccc;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+        padding: 60px 20px;
+        background-image: radial-gradient(circle at top left, rgba(255, 215, 0, 0.03), transparent);
+    }
+
+    .container {
+        max-width: 800px;
+        width: 100%;
+        background: var(--glass);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 50px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: var(--primary);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+
+    .intro-text {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        border-bottom: 1px solid var(--glass);
+        padding-bottom: 20px;
+    }
+
+    /* Estilização das Seções */
+    .term-section {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Número decorativo antes do título */
+    h2::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--primary);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--primary);
+    }
+
+    p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        padding-left: 20px;
+    }
+
+    /* Botão Voltar Estilizado */
+    .btn-back {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 40px;
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: 0.3s;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        border: 1px solid transparent;
+    }
+
+    .btn-back:hover {
+        background: rgba(255, 215, 0, 0.1);
+        border-color: var(--primary);
+        color: var(--primary);
+        transform: translateX(-5px);
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+        .container { padding: 30px 20px; }
+        h1 { font-size: 1.8rem; }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Termos de Uso</h1>
+    <p class="intro-text">Ao acessar o site da <strong>Zainer FM</strong>, você concorda com os termos detalhados abaixo.</p>
+
+    <div class="term-section">
+        <h2>1. Uso do Site</h2>
+        <p>O usuário se compromete a utilizar o site e seus serviços (streaming, chats ou formulários) de forma legal, ética e em conformidade com as leis brasileiras.</p>
+    </div>
+
+    <div class="term-section">
+        <h2>2. Serviços</h2>
+        <p>A Zainer FM oferece conteúdo de entretenimento radiofônico gratuito, pedidos de músicas e canais diretos para contato comercial. Reservamo-nos o direito de alterar a programação sem aviso prévio.</p>
+    </div>
+
+    <div class="term-section">
+        <h2>3. Responsabilidades</h2>
+        <p>Não nos responsabilizamos por interrupções temporárias de sinal por falhas de internet, falhas técnicas de terceiros ou conteúdos presentes em links externos que redirecionem para fora do nosso domínio.</p>
+    </div>
+
+    <div class="term-section">
+        <h2>4. Propriedade Intelectual</h2>
+        <p>Todo o design, logotipos, áudios proprietários e textos deste site são protegidos por direitos autorais. A reprodução não autorizada para fins comerciais é proibida.</p>
+    </div>
+
+    <div class="term-section">
+        <h2>5. Modificações</h2>
+        <p>Estes termos podem ser atualizados a qualquer momento para refletir melhorias técnicas ou mudanças na legislação vigente. Recomendamos a leitura periódica.</p>
+    </div>
+
+    <div class="term-section">
+        <h2>6. Contato</h2>
+        <p>Para dúvidas legais ou sugestões, utilize o canal oficial de WhatsApp disponível em nossa página inicial ou nossa página de contato.</p>
+    </div>
+
+    <a href="../index.html" class="btn-back">← Voltar para a Rádio</a>
+
+</div>
+</body>
+</html>

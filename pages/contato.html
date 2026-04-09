@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Zainer FM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../icon.jpg" type="image/x-icon">
+    
+    <style>
+        /* Reutilizando as variáveis do seu sistema */
+        :root {
+            --primary: #FFD700;
+            --secondary: #222;
+            --bg: #0a0a0a;
+            --glass: rgba(255, 255, 255, 0.05);
+            --text: #fff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            /* Fundo sutil para combinar com o Hero */
+            background-image: 
+                radial-gradient(circle at top right, rgba(255, 215, 0, 0.05), transparent),
+                radial-gradient(circle at bottom left, rgba(255, 215, 0, 0.05), transparent);
+        }
+
+        /* Container do Formulário com Glassmorphism */
+        #formContato {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Estilização dos Campos */
+        input, textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.07);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Botão seguindo o estilo .btn-primary / .btn-secondary */
+        button[type="submit"] {
+            width: 100%;
+            background: var(--primary);
+            color: #000;
+            border: none;
+            padding: 16px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+            filter: brightness(1.1);
+        }
+
+        /* Efeito de brilho passando no botão */
+        button[type="submit"]::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(30deg);
+            transition: all 0.6s;
+        }
+
+        button[type="submit"]:hover::after {
+            left: 120%;
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            #formContato {
+                padding: 25px;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <form id="formContato">
+        <h2>Fale Conosco</h2>
+
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea placeholder="Como podemos ajudar?" required></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <script>
+        document.getElementById("formContato").addEventListener("submit", function(e){
+            e.preventDefault();
+            
+            // Efeito visual de feedback
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = "ENVIANDO...";
+            btn.style.opacity = "0.7";
+            btn.style.pointerEvents = "none";
+
+            setTimeout(() => {
+                alert("Rádio Zainer FM: Mensagem enviada com sucesso! Em breve entraremos em contato.");
+                btn.innerText = originalText;
+                btn.style.opacity = "1";
+                btn.style.pointerEvents = "all";
+                e.target.reset();
+            }, 1500);
+        });
+    </script>
+
+</body>
+</html>

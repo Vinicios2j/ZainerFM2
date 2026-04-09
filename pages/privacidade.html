@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | Zainer FM</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../icon.jpg" type="image/x-icon">
+
+    <style>
+        :root {
+            --primary: #FFD700;
+            --bg: #0a0a0a;
+            --glass: rgba(255, 255, 255, 0.05);
+            --text: #fff;
+            --text-muted: #b8b8c2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 80px 20px;
+            background-image: radial-gradient(circle at bottom right, rgba(255, 215, 0, 0.04), transparent);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 60px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 40px 0 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        p, li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 18px;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Link Voltar */
+        .back {
+            display: inline-block;
+            margin-top: 50px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 25px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            background: var(--primary);
+            color: #000;
+            transform: translateX(-5px);
+        }
+
+        /* COOKIE BANNER CUSTOM */
+        .cookie-banner {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--primary);
+            padding: 20px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            z-index: 9999;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from { bottom: -100px; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+
+        .cookie-banner button {
+            background: var(--primary);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: 0.2s;
+        }
+
+        .cookie-banner button:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 30px; }
+            h1 { font-size: 2rem; }
+            .cookie-banner { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Política de Privacidade</h1>
+
+    <p class="intro">
+        A <strong>Zainer FM</strong> respeita a sua privacidade e está comprometida com a proteção dos seus dados pessoais,
+        em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+    </p>
+
+    <h2>1. Dados Coletados</h2>
+    <p>Podemos coletar os seguintes dados durante sua interação conosco:</p>
+    <ul>
+        <li>Nome e informações fornecidas voluntariamente em formulários</li>
+        <li>Dados enviados via integração oficial com WhatsApp</li>
+        <li>Endereço IP, tipo de navegador e comportamento de navegação</li>
+        <li>Cookies essenciais e tecnologias de análise</li>
+    </ul>
+
+    <h2>2. Finalidade do Uso</h2>
+    <ul>
+        <li>Melhorar a experiência do ouvinte no site</li>
+        <li>Processar pedidos de música e participações ao vivo</li>
+        <li>Gestão comercial para anúncios e parcerias</li>
+        <li>Análise estatística de audiência digital</li>
+    </ul>
+
+    <h2>3. Base Legal (LGPD)</h2>
+    <p>O tratamento de dados ocorre estritamente sob as bases:</p>
+    <ul>
+        <li>Consentimento explícito do usuário</li>
+        <li>Execução de serviços solicitados</li>
+        <li>Legítimo interesse da rádio para melhoria contínua</li>
+        <li>Cumprimento de obrigações legais</li>
+    </ul>
+
+    <h2>4. Compartilhamento de Dados</h2>
+    <p>Não comercializamos seus dados. O compartilhamento ocorre apenas com:</p>
+    <ul>
+        <li>Plataformas operacionais (Ex: WhatsApp, Google Analytics)</li>
+        <li>Provedores de hospedagem de alta segurança</li>
+        <li>Órgãos judiciais, quando legalmente solicitado</li>
+    </ul>
+
+    <h2>5. Segurança e Retenção</h2>
+    <p>
+        Adotamos protocolos de criptografia e segurança digital. Seus dados são mantidos apenas pelo período necessário para a prestação do serviço ou conforme prazos legais.
+    </p>
+
+    <h2>6. Seus Direitos</h2>
+    <p>A qualquer momento, você pode solicitar via nossos canais oficiais:</p>
+    <ul>
+        <li>Acesso e confirmação da existência de dados</li>
+        <li>Correção de dados incompletos ou desatualizados</li>
+        <li>Eliminação de dados tratados com seu consentimento</li>
+    </ul>
+
+    <a href="../index.html" class="back">← Voltar para a Home</a>
+</div>
+
+<div class="cookie-banner" id="cookieBanner">
+    <p style="font-size: 0.85rem;">Sintonizamos sua experiência: usamos cookies para entender como você interage com nossa rádio.</p>
+    <button onclick="acceptCookies()">Entendido!</button>
+</div>
+
+<script>
+    function acceptCookies(){
+        localStorage.setItem("cookieConsent","true");
+        document.getElementById("cookieBanner").style.display="none";
+    }
+
+    // Verifica se já aceitou ao carregar a página
+    window.onload = function() {
+        if(localStorage.getItem("cookieConsent") === "true"){
+            document.getElementById("cookieBanner").style.display="none";
+        }
+    }
+</script>
+
+</body>
+</html>
