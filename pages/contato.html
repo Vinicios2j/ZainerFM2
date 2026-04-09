@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | Zainer FM</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Entre em contato com a Zainer FM para dúvidas, parcerias, oportunidades e informações gerais.">
+    <link rel="canonical" href="https://zainerfm.site/pages/contato.html">
     <link rel="shortcut icon" href="../icon.jpg" type="image/x-icon">
-    
+
     <style>
         /* Reutilizando as variáveis do seu sistema */
         :root {
@@ -17,7 +21,11 @@
             --text: #fff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -29,7 +37,7 @@
             justify-content: center;
             padding: 20px;
             /* Fundo sutil para combinar com o Hero */
-            background-image: 
+            background-image:
                 radial-gradient(circle at top right, rgba(255, 215, 0, 0.05), transparent),
                 radial-gradient(circle at bottom left, rgba(255, 215, 0, 0.05), transparent);
         }
@@ -66,7 +74,8 @@
         }
 
         /* Estilização dos Campos */
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -79,7 +88,8 @@
             transition: 0.3s;
         }
 
-        input:focus, textarea:focus {
+        input:focus,
+        textarea:focus {
             outline: none;
             border-color: var(--primary);
             background: rgba(255, 255, 255, 0.07);
@@ -137,12 +147,14 @@
             #formContato {
                 padding: 25px;
             }
+
             h2 {
                 font-size: 1.6rem;
             }
         }
     </style>
 </head>
+
 <body>
 
     <form id="formContato">
@@ -156,13 +168,13 @@
     </form>
 
     <script>
-        document.getElementById("formContato").addEventListener("submit", function(e){
+        document.getElementById("formContato").addEventListener("submit", function (e) {
             e.preventDefault();
-            
+
             // Efeito visual de feedback
             const btn = e.target.querySelector('button');
             const originalText = btn.innerText;
-            
+
             btn.innerText = "ENVIANDO...";
             btn.style.opacity = "0.7";
             btn.style.pointerEvents = "none";
@@ -178,4 +190,5 @@
     </script>
 
 </body>
+
 </html>

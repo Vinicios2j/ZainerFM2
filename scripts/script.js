@@ -16,7 +16,7 @@ if (typeof ScrollReveal !== 'undefined') {
 // ==========================
 // 2. CONFIG API
 // ==========================
-const API_BASE = 'https://zinerapi.squareweb.app';
+const API_BASE = 'https://zinerapi.squareweb.app'; 
 
 // ==========================
 // 3. ELEMENTOS
